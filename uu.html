@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+        body{
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+       .container{
+        width: 400px;
+        margin: 80px auto;
+        display: flex;
+        height: 350px;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgb(122, 122, 122);
+        align-items: center;
+        box-shadow: 4px 2px 14px 20px  blue;
+       }
+       .show{
+        width: 200px;
+        height: 100px;
+        color: white;
+        /* border: 2px solid black; */
+        margin: 20px;
+        margin-top: 70px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: flex;
+        font-weight: bolder;
+        font-size: 40px;
+        background-color: transparent;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 4px 2px 14px 20px  rgb(48, 48, 202);
+       }
+       .btn{
+        width: 100%;
+    justify-content: space-evenly;
+    margin-top: 50px;
+
+    padding: 10px;
+       }
+       .add{
+        width: 90px;
+        border-radius: 20px;
+        border: none;
+        padding: 11px;
+        color: white;
+        background-color: orangered;
+    
+    }
+    .remove{
+        width: 90px;
+        border-radius: 20px;
+        border: none;
+        padding: 10px;
+        color: white;
+        background-color: orangered;
+        
+       }
+
+       .reset{
+        width: 90px;
+        border-radius: 20px;
+        border: none;
+        padding: 10px;
+        color: white;
+        background-color: orangered;
+        
+       }
+      </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="show">0</div>
+            <div class="btn">
+
+                <button class="add" type="button">Increment</button>
+                <button class="remove" type="button">Decrement</button>
+                <button class="reset" type="button">Reset</button>
+            </div>
+            </div>
+      <script>let container = document.querySelector(".container")
+        let show = document.querySelector(".show")
+        let add = document.querySelector(".add")
+        let remove =  document.querySelector(".remove")
+        let reset =  document.querySelector(".reset")
+        
+        
+        
+        
+        
+          add.onclick = function add() {
+            show.innerHTML ++
+        
+          }
+        
+          remove.onclick = function remove() {
+            show.innerHTML -= 1
+            if (show.innerHTML <= 0) {
+              clearInterval(show)
+          }
+        
+          }
+          reset.onclick = function reset() {
+            show.innerHTML = 0
+          }</script>
+    </body>
+  </html>
+</html>
